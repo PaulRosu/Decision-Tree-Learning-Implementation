@@ -1,0 +1,20 @@
+Decision Tree Visualization
+==================================================
+
+└── outlook
+    ├── sunny
+    │   ├── temperature
+    │       ├── hot
+    │       │   └── Class: no
+    │       ├── mild
+    │       │   └── Class: no
+    │       └── cool
+    │           └── Class: yes
+    ├── overcast
+    │   └── Class: yes
+    └── rainy
+        └── windy
+            ├── TRUE
+            │   └── Class: no
+            └── FALSE
+                └── Class: yes

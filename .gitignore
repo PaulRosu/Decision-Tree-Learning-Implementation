@@ -1,0 +1,14 @@
+# Virtual environment
+venv/
+
+# Documentation
+doc/
+
+# Python cache files
+__pycache__/
+
+# IDE files
+.vscode/
+
+# OS generated files
+Thumbs.db

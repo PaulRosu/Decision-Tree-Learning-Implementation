@@ -1,0 +1,314 @@
+Decision Tree Visualization
+==================================================
+
+└── fruit-spots
+    ├── absent
+    │   ├── leafspot-size
+    │       ├── lt-1/8
+    │       │   ├── leafspots-marg
+    │       │       ├── w-s-marg
+    │       │       │   ├── seed-size
+    │       │       │       ├── norm
+    │       │       │       │   ├── roots
+    │       │       │       │       ├── norm
+    │       │       │       │       │   └── Class: bacterial-blight
+    │       │       │       │       ├── rotted
+    │       │       │       │       │   └── Class: bacterial-pustule
+    │       │       │       │       └── galls-cysts
+    │       │       │       │           └── Class: bacterial-blight
+    │       │       │       └── lt-norm
+    │       │       │           └── Class: bacterial-pustule
+    │       │       ├── no-w-s-marg
+    │       │       │   └── Class: bacterial-pustule
+    │       │       └── dna
+    │       │           └── Class: bacterial-pustule
+    │       ├── gt-1/8
+    │       │   ├── date
+    │       │       ├── april
+    │       │       │   └── Class: brown-spot
+    │       │       ├── may
+    │       │       │   ├── precip
+    │       │       │       ├── lt-norm
+    │       │       │       │   └── Class: phyllosticta-leaf-spot
+    │       │       │       ├── norm
+    │       │       │       │   ├── plant-stand
+    │       │       │       │       ├── normal
+    │       │       │       │       │   └── Class: brown-spot
+    │       │       │       │       └── lt-normal
+    │       │       │       │           └── Class: phyllosticta-leaf-spot
+    │       │       │       └── gt-norm
+    │       │       │           └── temp
+    │       │       │               ├── lt-norm
+    │       │       │               │   └── Class: downy-mildew
+    │       │       │               ├── norm
+    │       │       │               │   └── Class: brown-spot
+    │       │       │               └── gt-norm
+    │       │       │                   └── Class: brown-spot
+    │       │       ├── june
+    │       │       │   ├── leaf-mild
+    │       │       │       ├── absent
+    │       │       │       │   ├── precip
+    │       │       │       │       ├── lt-norm
+    │       │       │       │       │   └── Class: phyllosticta-leaf-spot
+    │       │       │       │       ├── norm
+    │       │       │       │       │   ├── temp
+    │       │       │       │       │       ├── lt-norm
+    │       │       │       │       │       │   └── Class: phyllosticta-leaf-spot
+    │       │       │       │       │       ├── norm
+    │       │       │       │       │       │   ├── germination
+    │       │       │       │       │       │       ├── 90-100
+    │       │       │       │       │       │       │   └── Class: brown-spot
+    │       │       │       │       │       │       ├── 80-89
+    │       │       │       │       │       │       │   └── Class: phyllosticta-leaf-spot
+    │       │       │       │       │       │       └── lt-80
+    │       │       │       │       │       │           └── Class: brown-spot
+    │       │       │       │       │       └── gt-norm
+    │       │       │       │       │           └── Class: phyllosticta-leaf-spot
+    │       │       │       │       └── gt-norm
+    │       │       │       │           └── Class: brown-spot
+    │       │       │       ├── upper-surf
+    │       │       │       │   └── Class: brown-spot
+    │       │       │       └── lower-surf
+    │       │       │           └── Class: downy-mildew
+    │       │       ├── july
+    │       │       │   ├── area-damaged
+    │       │       │       ├── scattered
+    │       │       │       │   ├── crop-hist
+    │       │       │       │       ├── diff-lst-year
+    │       │       │       │       │   ├── hail
+    │       │       │       │       │       ├── yes
+    │       │       │       │       │       │   └── Class: alternarialeaf-spot
+    │       │       │       │       │       └── no
+    │       │       │       │       │           └── Class: frog-eye-leaf-spot
+    │       │       │       │       ├── same-lst-yr
+    │       │       │       │       │   ├── hail
+    │       │       │       │       │       ├── yes
+    │       │       │       │       │       │   └── Class: frog-eye-leaf-spot
+    │       │       │       │       │       └── no
+    │       │       │       │       │           └── Class: downy-mildew
+    │       │       │       │       ├── same-lst-two-yrs
+    │       │       │       │       │   └── Class: phyllosticta-leaf-spot
+    │       │       │       │       └── same-lst-sev-yrs
+    │       │       │       │           └── Class: frog-eye-leaf-spot
+    │       │       │       ├── low-areas
+    │       │       │       │   ├── temp
+    │       │       │       │       ├── lt-norm
+    │       │       │       │       │   └── Class: brown-spot
+    │       │       │       │       ├── norm
+    │       │       │       │       │   └── Class: brown-spot
+    │       │       │       │       └── gt-norm
+    │       │       │       │           └── Class: downy-mildew
+    │       │       │       ├── upper-areas
+    │       │       │       │   ├── temp
+    │       │       │       │       ├── lt-norm
+    │       │       │       │       │   └── Class: downy-mildew
+    │       │       │       │       ├── norm
+    │       │       │       │       │   ├── precip
+    │       │       │       │       │       ├── lt-norm
+    │       │       │       │       │       │   └── Class: phyllosticta-leaf-spot
+    │       │       │       │       │       ├── norm
+    │       │       │       │       │       │   └── Class: phyllosticta-leaf-spot
+    │       │       │       │       │       └── gt-norm
+    │       │       │       │       │           └── Class: brown-spot
+    │       │       │       │       └── gt-norm
+    │       │       │       │           └── Class: frog-eye-leaf-spot
+    │       │       │       └── whole-field
+    │       │       │           └── precip
+    │       │       │               ├── lt-norm
+    │       │       │               │   └── Class: phyllosticta-leaf-spot
+    │       │       │               ├── norm
+    │       │       │               │   └── Class: brown-spot
+    │       │       │               └── gt-norm
+    │       │       │                   └── Class: brown-spot
+    │       │       ├── august
+    │       │       │   ├── stem
+    │       │       │       ├── norm
+    │       │       │       │   ├── leaf-mild
+    │       │       │       │       ├── absent
+    │       │       │       │       │   ├── seed-tmt
+    │       │       │       │       │       ├── none
+    │       │       │       │       │       │   ├── area-damaged
+    │       │       │       │       │       │       ├── scattered
+    │       │       │       │       │       │       │   ├── crop-hist
+    │       │       │       │       │       │       │       ├── diff-lst-year
+    │       │       │       │       │       │       │       │   └── Class: alternarialeaf-spot
+    │       │       │       │       │       │       │       ├── same-lst-yr
+    │       │       │       │       │       │       │       │   └── Class: alternarialeaf-spot
+    │       │       │       │       │       │       │       ├── same-lst-two-yrs
+    │       │       │       │       │       │       │       │   └── Class: frog-eye-leaf-spot
+    │       │       │       │       │       │       │       └── same-lst-sev-yrs
+    │       │       │       │       │       │       │           └── Class: frog-eye-leaf-spot
+    │       │       │       │       │       │       ├── low-areas
+    │       │       │       │       │       │       │   └── Class: alternarialeaf-spot
+    │       │       │       │       │       │       ├── upper-areas
+    │       │       │       │       │       │       │   └── Class: alternarialeaf-spot
+    │       │       │       │       │       │       └── whole-field
+    │       │       │       │       │       │           └── Class: alternarialeaf-spot
+    │       │       │       │       │       ├── fungicide
+    │       │       │       │       │       │   ├── germination
+    │       │       │       │       │       │       ├── 90-100
+    │       │       │       │       │       │       │   └── Class: frog-eye-leaf-spot
+    │       │       │       │       │       │       ├── 80-89
+    │       │       │       │       │       │       │   ├── plant-stand
+    │       │       │       │       │       │       │       ├── normal
+    │       │       │       │       │       │       │       │   ├── precip
+    │       │       │       │       │       │       │       │       ├── lt-norm
+    │       │       │       │       │       │       │       │       │   └── Class: alternarialeaf-spot
+    │       │       │       │       │       │       │       │       ├── norm
+    │       │       │       │       │       │       │       │       │   └── Class: frog-eye-leaf-spot
+    │       │       │       │       │       │       │       │       └── gt-norm
+    │       │       │       │       │       │       │       │           └── Class: alternarialeaf-spot
+    │       │       │       │       │       │       │       └── lt-normal
+    │       │       │       │       │       │       │           └── Class: phyllosticta-leaf-spot
+    │       │       │       │       │       │       └── lt-80
+    │       │       │       │       │       │           └── Class: alternarialeaf-spot
+    │       │       │       │       │       └── other
+    │       │       │       │       │           └── Class: frog-eye-leaf-spot
+    │       │       │       │       ├── upper-surf
+    │       │       │       │       │   └── Class: alternarialeaf-spot
+    │       │       │       │       └── lower-surf
+    │       │       │       │           └── Class: downy-mildew
+    │       │       │       └── abnorm
+    │       │       │           └── Class: brown-spot
+    │       │       ├── september
+    │       │       │   ├── temp
+    │       │       │       ├── lt-norm
+    │       │       │       │   └── Class: downy-mildew
+    │       │       │       ├── norm
+    │       │       │       │   ├── fruiting-bodies
+    │       │       │       │       ├── absent
+    │       │       │       │       │   ├── leafspots-halo
+    │       │       │       │       │       ├── absent
+    │       │       │       │       │       │   └── Class: alternarialeaf-spot
+    │       │       │       │       │       ├── yellow-halos
+    │       │       │       │       │       │   └── Class: downy-mildew
+    │       │       │       │       │       └── no-yellow-halos
+    │       │       │       │       │           └── crop-hist
+    │       │       │       │       │               ├── diff-lst-year
+    │       │       │       │       │               │   └── Class: alternarialeaf-spot
+    │       │       │       │       │               ├── same-lst-yr
+    │       │       │       │       │               │   ├── severity
+    │       │       │       │       │               │       ├── minor
+    │       │       │       │       │               │       │   └── Class: alternarialeaf-spot
+    │       │       │       │       │               │       ├── pot-severe
+    │       │       │       │       │               │       │   └── Class: frog-eye-leaf-spot
+    │       │       │       │       │               │       └── severe
+    │       │       │       │       │               │           └── Class: frog-eye-leaf-spot
+    │       │       │       │       │               ├── same-lst-two-yrs
+    │       │       │       │       │               │   ├── hail
+    │       │       │       │       │               │       ├── yes
+    │       │       │       │       │               │       │   └── Class: alternarialeaf-spot
+    │       │       │       │       │               │       └── no
+    │       │       │       │       │               │           └── Class: frog-eye-leaf-spot
+    │       │       │       │       │               └── same-lst-sev-yrs
+    │       │       │       │       │                   └── plant-stand
+    │       │       │       │       │                       ├── normal
+    │       │       │       │       │                       │   └── Class: alternarialeaf-spot
+    │       │       │       │       │                       └── lt-normal
+    │       │       │       │       │                           └── Class: frog-eye-leaf-spot
+    │       │       │       │       └── present
+    │       │       │       │           └── Class: brown-spot
+    │       │       │       └── gt-norm
+    │       │       │           └── Class: alternarialeaf-spot
+    │       │       └── october
+    │       │           └── temp
+    │       │               ├── lt-norm
+    │       │               │   └── Class: downy-mildew
+    │       │               ├── norm
+    │       │               │   ├── crop-hist
+    │       │               │       ├── diff-lst-year
+    │       │               │       │   └── Class: alternarialeaf-spot
+    │       │               │       ├── same-lst-yr
+    │       │               │       │   └── Class: alternarialeaf-spot
+    │       │               │       ├── same-lst-two-yrs
+    │       │               │       │   ├── area-damaged
+    │       │               │       │       ├── scattered
+    │       │               │       │       │   └── Class: alternarialeaf-spot
+    │       │               │       │       ├── low-areas
+    │       │               │       │       │   └── Class: alternarialeaf-spot
+    │       │               │       │       ├── upper-areas
+    │       │               │       │       │   └── Class: alternarialeaf-spot
+    │       │               │       │       └── whole-field
+    │       │               │       │           └── Class: frog-eye-leaf-spot
+    │       │               │       └── same-lst-sev-yrs
+    │       │               │           └── Class: alternarialeaf-spot
+    │       │               └── gt-norm
+    │       │                   └── Class: alternarialeaf-spot
+    │       └── dna
+    │           └── leaf-mild
+    │               ├── absent
+    │               │   ├── canker-lesion
+    │               │       ├── dna
+    │               │       │   └── Class: brown-stem-rot
+    │               │       ├── brown
+    │               │       │   └── Class: anthracnose
+    │               │       ├── dk-brown-blk
+    │               │       │   └── Class: anthracnose
+    │               │       └── tan
+    │               │           └── Class: purple-seed-stain
+    │               ├── upper-surf
+    │               │   └── Class: powdery-mildew
+    │               └── lower-surf
+    │                   └── Class: brown-stem-rot
+    ├── colored
+    │   ├── canker-lesion
+    │       ├── dna
+    │       │   └── Class: frog-eye-leaf-spot
+    │       ├── brown
+    │       │   ├── precip
+    │       │       ├── lt-norm
+    │       │       │   └── Class: frog-eye-leaf-spot
+    │       │       ├── norm
+    │       │       │   └── Class: brown-spot
+    │       │       └── gt-norm
+    │       │           └── Class: frog-eye-leaf-spot
+    │       ├── dk-brown-blk
+    │       │   └── Class: frog-eye-leaf-spot
+    │       └── tan
+    │           └── Class: purple-seed-stain
+    ├── brown-w/blk-specks
+    │   ├── leafspots-halo
+    │       ├── absent
+    │       │   └── Class: anthracnose
+    │       ├── yellow-halos
+    │       │   └── Class: anthracnose
+    │       └── no-yellow-halos
+    │           └── date
+    │               ├── april
+    │               │   └── Class: brown-spot
+    │               ├── may
+    │               │   └── Class: brown-spot
+    │               ├── june
+    │               │   └── Class: brown-spot
+    │               ├── july
+    │               │   └── Class: brown-spot
+    │               ├── august
+    │               │   └── Class: brown-spot
+    │               ├── september
+    │               │   └── Class: brown-spot
+    │               └── october
+    │                   └── Class: frog-eye-leaf-spot
+    └── dna
+        └── stem-cankers
+            ├── absent
+            │   ├── int-discolor
+            │       ├── none
+            │       │   └── Class: brown-stem-rot
+            │       ├── brown
+            │       │   └── Class: brown-stem-rot
+            │       └── black
+            │           └── Class: charcoal-rot
+            ├── below-soil
+            │   ├── canker-lesion
+            │       ├── dna
+            │       │   └── Class: rhizoctonia-root-rot
+            │       ├── brown
+            │       │   └── Class: rhizoctonia-root-rot
+            │       ├── dk-brown-blk
+            │       │   └── Class: phytophthora-rot
+            │       └── tan
+            │           └── Class: rhizoctonia-root-rot
+            ├── above-soil
+            │   └── Class: phytophthora-rot
+            └── above-sec-nde
+                └── Class: diaporthe-stem-canker
